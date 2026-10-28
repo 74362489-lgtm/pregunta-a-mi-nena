@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Aún me amas?</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:linear-gradient(145deg,#fff0f4,#fce7f3 55%,#fff7ed);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#482536}.card{width:min(100%,420px);background:#ffffffed;border:1px solid #ffffff;border-radius:28px;padding:30px 24px;box-shadow:0 18px 55px #9d42631c;text-align:center}.heart{font-size:52px;margin-bottom:8px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#a14f72;font-weight:700}h1{font-size:30px;line-height:1.15;margin:12px 0}p{line-height:1.65;color:#755367}.buttons{display:flex;gap:12px;margin-top:24px}.buttons button,.again{flex:1;border:0;border-radius:15px;padding:14px 12px;font-size:16px;font-weight:700;cursor:pointer}.yes{background:#d94d83;color:white}.no{background:#f5e8ee;color:#7e3b59}.message{display:none;margin-top:22px;padding:18px;border-radius:18px;background:#fff3f7;text-align:left;line-height:1.65;white-space:pre-line}.message h2{text-align:center;font-size:20px;margin:0 0 10px;color:#a83265}.again{margin-top:14px;background:transparent;color:#9a5877;display:none;border:1px solid #edc8d8}.small{font-size:12px;color:#ad8b9c;margin-top:22px}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="heart">❤️</div>
+<div class="eyebrow">Una pregunta sincera</div>
+<h1>¿Aún me amas?</h1>
+<p>Quisiera saber qué siente tu corazón… 🥺</p>
+<div class="buttons" id="buttons">
+<button class="yes" onclick="showAnswer('yes')">Sí ❤️</button>
+<button class="no" onclick="showAnswer('no')">No 💔</button>
+</div>
+<section class="message" id="yes" aria-live="polite"><h2>🥹❤️ No sabes cuánto quería leer esto</h2>Yo todavía te amo y te extraño muchísimo. Me gustaría que habláramos y, si tú también quieres, darnos otra oportunidad. No espero que todo se arregle de un día para otro; solo quisiera demostrarte que podemos hacer las cosas mejor esta vez.</section>
+<section class="message" id="no" aria-live="polite"><h2>💔 Gracias por ser sincera</h2>Aunque me duela, respeto lo que sientes. Solo quería hablarte con el corazón y que supieras que lo nuestro fue importante para mí. Te deseo lo mejor, de corazón.</section>
+<button class="again" id="again" onclick="resetPage()">Volver a elegir</button>
+<div class="small">Hecha con cariño ❤️</div>
+</main>
+<script>
+function showAnswer(answer){document.getElementById('buttons').style.display='none';document.getElementById('yes').style.display=answer==='yes'?'block':'none';document.getElementById('no').style.display=answer==='no'?'block':'none';document.getElementById('again').style.display='block'}
+function resetPage(){document.getElementById('buttons').style.display='flex';document.getElementById('yes').style.display='none';document.getElementById('no').style.display='none';document.getElementById('again').style.display='none'}
+</script>
+</body>
+</html>
